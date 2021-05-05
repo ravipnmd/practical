@@ -217,7 +217,7 @@ class Web extends CI_Controller {
                         while ($curr_date <= $from_date) {
 //                            $dates[] = date('Y-m-d', $curr_date);
                             $insert_date = [
-                                'event_list_id' => $qry,
+                                'event_list_id' => $event_id,
                                 'event_date' => date('Y-m-d', $curr_date),
                                 'event_day' => date('l', $curr_date),
                             ];
@@ -244,7 +244,7 @@ class Web extends CI_Controller {
                         while ($curr_date <= $from_date) {
                             $dates[] = date('Y-m-d', strtotime($rule . date('Y-m', $curr_date)));
                             $insert_date = [
-                                'event_list_id' => $qry,
+                                'event_list_id' => $event_id,
                                 'event_date' => date('Y-m-d', strtotime($rule . date('Y-m', $curr_date))),
                                 'event_day' => date('l', strtotime($rule . date('Y-m', $curr_date))),
                             ];
